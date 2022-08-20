@@ -9,6 +9,11 @@ body {
   min-height: utils.$min-height;
   width: utils.$min-width;
   margin: 0;
+  background-image: linear-gradient(350deg, rgba(255,253,240,1) 0%, rgba(222,220,205,1) 85%);
+  background-color: rgb(222,220,205);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -33,7 +38,7 @@ a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: utils.$quaternary-color;
+  background: utils.$secondary-color;
 }
 
 /* Handle on hover */

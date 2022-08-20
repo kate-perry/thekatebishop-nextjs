@@ -11,12 +11,12 @@ export type Portfolio = {
 export const transitionTimeout = 1000
 export const paletteArray = ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary']
 export const palette = {
-    primary: '#070538',
-    secondary: '#04A6BF',
-    tertiary: '#E9513A',
-    quaternary: '#FFDD61',
-    quinary: '#FFFDF0',
-    senary: '#BDDBD0'
+    primary: '#1C0A27',
+    secondary: '#4A5101',
+    tertiary: '#F16023',
+    quaternary: '#D8B93D',
+    quinary: '#EDE3D6',
+    senary: '#E0D9C3'
 }
 export const breakpoint = {
     small: 480,

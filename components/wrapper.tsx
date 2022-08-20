@@ -17,10 +17,8 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./wrapper.module.scss";
 import { ThemeProvider } from "@mui/material/styles";
-import { wrapperTheme } from "../styles/mui.themes";
-import { title } from "../utils/strings";
+import { navTheme } from "../styles/mui.themes";
 import { breakpoint } from "../utils/constants";
-import { NavigateBefore } from "@mui/icons-material";
 
 type WrapperProps = {
   children: JSX.Element;
@@ -93,12 +91,12 @@ export default function Wrapper({ children }: WrapperProps) {
 
   return (
     <SmallScreenContext.Provider value={useSmallScreen}>
-      <ThemeProvider theme={wrapperTheme}>
-        <Head>
-          <title>Kate Bishop</title>
-          <meta name="description" content="Kate Bishop: Front-End Engineer" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+      <Head>
+        <title>Kate Bishop</title>
+        <meta name="description" content="Kate Bishop: Front-End Engineer" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ThemeProvider theme={navTheme}>
         <HideOnScroll>
           <AppBar color="transparent" elevation={0}>
             <Toolbar>
@@ -111,7 +109,7 @@ export default function Wrapper({ children }: WrapperProps) {
                 <Grid item>
                   <Link href={`/`}>
                     <Typography variant="h5">
-                      <a>{title.toUpperCase()}</a>
+                      <a>KB</a>
                     </Typography>
                   </Link>
                 </Grid>
@@ -153,9 +151,9 @@ export default function Wrapper({ children }: WrapperProps) {
                           <Link href={page.url} key={page.title}>
                             <Typography
                               variant="h6"
-                              style={{ marginRight: "3rem" }}
+                              className={styles.appbarOptions}
                             >
-                              <a>{page.title}</a>
+                              <a>{page.title.toUpperCase()}</a>
                             </Typography>
                           </Link>
                         );
@@ -167,8 +165,10 @@ export default function Wrapper({ children }: WrapperProps) {
             </Toolbar>
           </AppBar>
         </HideOnScroll>
-        <main className={styles.main}>{children}</main>
       </ThemeProvider>
+      <main className={styles.main}>
+        {children}
+      </main>
     </SmallScreenContext.Provider>
   );
 }

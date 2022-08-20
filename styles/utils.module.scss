@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:wght@100;200;300&display=swap');
 
-$primary-color: #070538; // xiketic
-$secondary-color: #04A6BF; // ming
-$tertiary-color: #E9513A; // vermillion
-$quaternary-color: #FFDD61; // jonquil
-$quinary-color: #FFFDF0; // cornsilk
-$senary-color: #BDDBD0; //opal
-$font-stack: 'Open Sans', sans-serif;
+$primary-color: #1C0A27; // xiketic
+$secondary-color: #4A5101; // ming
+$tertiary-color: #F16023; // vermillion
+$quaternary-color: #D8B93D; // jonquil
+$quinary-color: #EDE3D6; // cornsilk
+$senary-color: #E0D9C3; //opal
+$title-stack: 'Aboreto', cursive;
+$font-stack: 'Montserrat', sans-serif;
 $min-height: 100vh;
 $min-width: 100%;
 $small-breakpoint: 480px;
 $medium-breakpoint: 768px;
 $large-breakpoint: 1024px;
-$quaternary-color-hover: #f0c631;
-$quaternary-color-active: #fde488;
+$quaternary-color-hover: #9c862f;
+$quaternary-color-active: #ffdc52;
+$background-color: rgba(224, 217, 195, .7);
 
 .app {
   font-family: $font-stack;

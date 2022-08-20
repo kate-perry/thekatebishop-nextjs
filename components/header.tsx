@@ -27,59 +27,50 @@ export default function Header() {
         <div className={styles.header}>
             <ThemeProvider theme={headerTheme}>
                 <div className={styles.content}>
-                    <Grid container direction='row' style={{ alignItems: 'center' }}>
-                        <Grid item xs={12} style={{ paddingRight: '1rem' }}>
-                            <CSSTransition
-                                in={showContent}
-                                timeout={transitionTimeout}
-                                classNames="content-left"
-                                unmountOnExit
-                                onEnter={() => setShowContent(true)}>
-                                <Grid container direction="column">
-                                    <Grid item>
-                                        <Typography variant="h1">{title.toUpperCase()}</Typography>
+                    <CSSTransition
+                        in={showContent}
+                        timeout={transitionTimeout}
+                        classNames="content-left"
+                        unmountOnExit
+                        onEnter={() => setShowContent(true)}>
+                        <Grid container direction="column" className={styles.titleContainer}>
+                            <Grid item>
+                                <Typography variant="h1">{title.toUpperCase()}</Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="h2" style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>{tagline1}</Typography>
+                            </Grid>
+                            <Grid item className={utils.redspan} />
+                            <Grid item>
+                                <Grid container direction="row" style={{ marginTop: '.5rem' }}>
+                                    <Grid item style={{ marginRight: '.75rem' }}>
+                                        <a href={linkedin}>
+                                            <Image
+                                                priority
+                                                src="/images/linkedinLogo.svg"
+                                                className={styles.logo}
+                                                height={25}
+                                                width={25}
+                                                alt={title}
+                                            />
+                                        </a>
                                     </Grid>
                                     <Grid item>
-                                        <Typography variant="h2" style={{ marginTop: '1.5rem' }}>{tagline1}</Typography>
-                                    </Grid>
-                                    <Grid item style={{ marginBottom: '1.5rem', marginTop: '3rem' }}>
-                                        <Typography variant="h3">
-                                            <span>{tagline2}</span>
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item className={utils.redspan} />
-                                    <Grid item>
-                                        <Grid container direction="row" style={{ marginTop: '.5rem' }}>
-                                            <Grid item style={{ marginRight: '.75rem' }}>
-                                                <a href={linkedin}>
-                                                    <Image
-                                                        priority
-                                                        src="/images/linkedinLogo.svg"
-                                                        className={styles.logo}
-                                                        height={25}
-                                                        width={25}
-                                                        alt={title}
-                                                    />
-                                                </a>
-                                            </Grid>
-                                            <Grid item>
-                                                <a href={github}>
-                                                    <Image
-                                                        priority
-                                                        src="/images/githubLogo.svg"
-                                                        className={styles.logo}
-                                                        height={25}
-                                                        width={25}
-                                                        alt={title}
-                                                    />
-                                                </a>
-                                            </Grid>
-                                        </Grid>
+                                        <a href={github}>
+                                            <Image
+                                                priority
+                                                src="/images/githubLogo.svg"
+                                                className={styles.logo}
+                                                height={25}
+                                                width={25}
+                                                alt={title}
+                                            />
+                                        </a>
                                     </Grid>
                                 </Grid>
-                            </CSSTransition>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </CSSTransition>
                 </div>
             </ThemeProvider >
         </div >

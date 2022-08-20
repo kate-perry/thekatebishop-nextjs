@@ -1,17 +1,19 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { palette } from '../utils/constants';
 
-export const wrapperTheme = responsiveFontSizes(createTheme({
+export const navTheme = responsiveFontSizes(createTheme({
   typography: {
-    fontFamily: [
-      'Open Sans',
-    ].join(','),
     h5: {
-      fontWeight: 800,
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
       color: palette.primary
     },
     h6: {
-      fontWeight: 300,
+      fontFamily: [
+        'Montserrat',
+      ].join(','),
+      fontSize: '1rem',
       color: palette.primary
     }
   },
@@ -20,12 +22,14 @@ export const wrapperTheme = responsiveFontSizes(createTheme({
 export const headerTheme = responsiveFontSizes(createTheme({
   typography: {
     fontFamily: [
-      'Open Sans',
+      'Montserrat',
     ].join(','),
     h1: {
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
       color: palette.primary,
       fontSize: '8rem',
-      fontWeight: 800,
       margin: 0,
       lineHeight: .75,
       '@media (max-width:480px)': {
@@ -34,8 +38,8 @@ export const headerTheme = responsiveFontSizes(createTheme({
     },
     h2: {
       color: palette.primary,
-      fontSize: '1.5rem',
-      fontWeight: 300,
+      fontSize: '1rem',
+      fontWeight: 200,
       textAlign: 'justify',
       textJustify: 'inter-word',
       '@media (max-width:480px)': {
@@ -43,12 +47,40 @@ export const headerTheme = responsiveFontSizes(createTheme({
       },
     },
     h3: {
-      color: palette.quinary,
-      fontSize: '1.1rem',
-      fontWeight: 400,
+      color: palette.primary,
+      fontSize: '1rem',
+      fontWeight: 300,
       textAlign: 'justify',
       textJustify: 'inter-word',
-      margin: 0,
+      '@media (max-width:480px)': {
+        fontSize: '1rem'
+      },
+    },
+  },
+}));
+
+export const aboutTheme = responsiveFontSizes(createTheme({
+  typography: {
+    fontFamily: [
+      'Montserrat',
+    ].join(','),
+    h1: {
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
+      color: palette.primary,
+      fontSize: '4rem',
+      '@media (max-width:480px)': {
+        fontSize: '2.5rem'
+      },
+    },
+    h2: {
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
+      color: palette.secondary,
+      fontSize: '1.5rem',
+      fontWeight: 300,
       '@media (max-width:480px)': {
         fontSize: '1rem'
       },
@@ -56,13 +88,9 @@ export const headerTheme = responsiveFontSizes(createTheme({
     subtitle1: {
       color: palette.primary,
       fontSize: '1rem',
-      fontWeight: 400,
-      textAlign: 'justify',
-      textJustify: 'inter-word',
-      '@media (max-width:480px)': {
-        fontSize: '.75rem'
-      },
-    }
+      fontWeight: 300,
+      margin: 0,
+    },
   },
 }));
 
@@ -72,47 +100,49 @@ export const portfolioTheme = responsiveFontSizes(createTheme({
       main: palette.quaternary
     },
     secondary: {
-      main: palette.quinary
+      main: palette.primary
     }
   },
   typography: {
     fontFamily: [
-      'Open Sans',
+      'Montserrat',
     ].join(','),
     h1: {
-      color: palette.quinary,
-      fontSize: '6rem',
-      fontWeight: 800,
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
+      color: palette.primary,
+      fontSize: '4rem',
       '@media (max-width:480px)': {
         fontSize: '2.5rem'
       },
     },
     h2: {
       color: palette.primary,
-      fontSize: '1.75rem',
-      fontWeight: 800,
+      fontSize: '1.5rem',
+      fontWeight: 300,
       '@media (max-width:480px)': {
-        fontSize: '1.5rem'
+        fontSize: '1rem'
       },
     },
     h3: {
       color: palette.primary,
-      fontSize: '1.25rem',
-      fontWeight: 700,
+      fontSize: '1.5rem',
+      fontWeight: 200,
       '@media (max-width:480px)': {
         fontSize: '1rem'
       },
     },
     subtitle1: {
-      color: palette.quinary,
+      color: palette.primary,
       fontSize: '1rem',
       fontWeight: 300,
       margin: 0,
     },
     subtitle2: {
-      color: palette.quinary,
-      fontSize: '1.1rem',
-      fontWeight: 400,
+      color: palette.primary,
+      fontSize: '1rem',
+      fontWeight: 200,
       margin: 0,
     },
   },
@@ -126,46 +156,25 @@ export const portfolioPageTheme = responsiveFontSizes(createTheme({
   },
   typography: {
     fontFamily: [
-      'Open Sans',
+      'Montserrat',
     ].join(','),
     h1: {
+      fontFamily: [
+        'Aboreto',
+      ].join(','),
       color: palette.primary,
       fontSize: '4rem',
-      fontWeight: 800,
-      '@media (max-width:480px)': {
-        fontSize: '1.5rem'
-      },
-    },
-    h2: {
-      color: palette.primary,
-    },
-  },
-}));
-
-export const aboutTheme = responsiveFontSizes(createTheme({
-  typography: {
-    fontFamily: [
-      'Open Sans',
-    ].join(','),
-    h1: {
-      color: palette.primary,
-      fontSize: '6rem',
-      fontWeight: 800,
       '@media (max-width:480px)': {
         fontSize: '2.5rem'
       },
     },
     h2: {
-      color: palette.secondary,
-      fontSize: '1.25rem',
-      fontWeight: 700,
-      margin: 0,
-    },
-    subtitle1: {
       color: palette.primary,
-      fontSize: '1rem',
+      fontSize: '1.5rem',
       fontWeight: 300,
-      margin: 0,
+      '@media (max-width:480px)': {
+        fontSize: '1rem'
+      },
     },
   },
 }));
